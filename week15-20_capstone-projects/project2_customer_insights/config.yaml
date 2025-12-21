@@ -1,0 +1,59 @@
+# Customer Insights System Configuration
+# 客戶洞察系統配置檔
+
+data:
+  path: './data'
+
+rfm:
+  # RFM 分析配置
+  recency_weight: 0.2
+  frequency_weight: 0.3
+  monetary_weight: 0.5
+
+  # 分數範圍
+  min_score: 1
+  max_score: 5
+
+cohort:
+  # 群組分析配置
+  cohort_period: 'month'  # 'day', 'week', 'month'
+  min_cohort_size: 10
+
+clv:
+  # CLV 計算配置
+  discount_rate: 0.1  # 10% 折現率
+  projection_period: 36  # 36個月
+
+  # CLV 預測
+  forecast_months: 12
+
+behavior:
+  # 行為分析配置
+  churn_threshold_days: 90  # 90天無購買視為流失
+  active_threshold_days: 30  # 30天內有購買視為活躍
+
+  # 流失風險分數權重
+  recency_weight: 0.4
+  frequency_weight: 0.3
+  monetary_weight: 0.2
+  stability_weight: 0.1
+
+recommendation:
+  # 推薦引擎配置
+  min_confidence: 0.1  # 最低信任度
+  max_recommendations: 5  # 最多推薦數
+
+  # 活動預算（每個客戶）
+  campaign_budget: 5
+
+output:
+  # 輸出配置
+  directory: './outputs'
+  formats:
+    - 'excel'
+    - 'pdf'
+    - 'json'
+
+logging:
+  level: 'INFO'
+  file: './customer_insights.log'

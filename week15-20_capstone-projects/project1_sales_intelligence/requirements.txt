@@ -1,0 +1,50 @@
+# Sales Intelligence Dashboard Requirements
+# 銷售智能儀表板 - 依賴套件清單
+
+# 核心數據處理
+pandas>=1.5.0
+numpy>=1.23.0
+openpyxl>=3.9.0
+
+# 可視化
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.13.0
+
+# 統計分析
+scipy>=1.10.0
+scikit-learn>=1.2.0
+statsmodels>=0.13.0
+
+# 報表生成
+reportlab>=4.0.0
+python-docx>=0.8.11
+PyPDF2>=3.0.0
+
+# 配置管理
+PyYAML>=6.0
+
+# 數據庫（可選）
+sqlalchemy>=2.0.0
+pymysql>=1.0.0
+psycopg2-binary>=2.9.0
+
+# 排程
+schedule>=1.1.0
+APScheduler>=3.10.0
+
+# 通知
+python-dotenv>=0.21.0
+smtplib
+
+# 日誌
+loguru>=0.6.0
+
+# 工具
+requests>=2.28.0
+python-dateutil>=2.8.2
+
+# 開發工具
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0

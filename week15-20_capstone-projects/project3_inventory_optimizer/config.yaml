@@ -1,0 +1,26 @@
+# Inventory Optimization System Configuration
+
+data:
+  path: './data'
+
+forecasting:
+  method: 'moving_average'  # 'moving_average', 'exponential_smoothing', 'arima'
+  window: 7  # 天數
+
+optimization:
+  service_level: 0.95  # 95% 服務水平
+  review_period: 30  # 天
+
+abc_analysis:
+  a_threshold: 80
+  b_threshold: 95
+
+output:
+  directory: './outputs'
+  formats:
+    - 'excel'
+    - 'pdf'
+
+logging:
+  level: 'INFO'
+  file: './inventory_optimizer.log'

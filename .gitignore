@@ -1,0 +1,78 @@
+# Excel to Python Advanced Analytics - Git Ignore 設定
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.jupyter/
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== 資料檔案 =====
+# 排除大型資料集（超過 100MB 不建議上傳 GitHub）
+datasets/kaggle/**/*.zip
+datasets/raw/**/*.csv
+datasets/raw/**/*.xlsx
+datasets/synthetic/**/*.csv
+datasets/synthetic/**/*.xlsx
+
+# 保留資料集產生腳本
+!datasets/synthetic/generate_ecommerce_data.py
+
+# ===== Excel 暫存檔 =====
+~$*.xlsx
+~$*.xls
+*.tmp
+
+# ===== 輸出檔案 =====
+output/
+exports/
+reports/
+*.pdf
+*.pptx
+
+# 可保留範本
+!templates/**/*.xlsx
+!templates/**/*.pptx
+
+# ===== 日誌檔案 =====
+logs/
+*.log
+
+# ===== 測試檔案 =====
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== 環境變數 =====
+.env
+.env.local
+.env.*.local
+
+# ===== 作業系統 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 其他 =====
+*.bak
+*.backup

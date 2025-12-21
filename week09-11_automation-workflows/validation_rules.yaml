@@ -1,0 +1,159 @@
+# 資料驗證規則配置檔案
+# 用於 case07_validation_engine.py
+
+# 訂單資料驗證規則
+validations:
+  order_id:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: str
+      severity: ERROR
+    - type: length
+      min_length: 5
+      max_length: 20
+      severity: ERROR
+    - type: pattern
+      pattern: '^[A-Z0-9]{5,}$'
+      severity: ERROR
+
+  customer_id:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: str
+      severity: ERROR
+    - type: pattern
+      pattern: '^C[0-9]{4,}$'
+      severity: ERROR
+
+  order_date:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: str
+      severity: ERROR
+    - type: pattern
+      pattern: '^\d{4}-\d{2}-\d{2}$'
+      severity: ERROR
+
+  product_id:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: str
+      severity: ERROR
+    - type: pattern
+      pattern: '^P[0-9]{4,}$'
+      severity: ERROR
+
+  quantity:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: int
+      severity: ERROR
+    - type: range
+      min: 1
+      max: 10000
+      severity: ERROR
+
+  unit_price:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: float
+      severity: ERROR
+    - type: range
+      min: 0.01
+      max: 999999.99
+      severity: ERROR
+
+  amount:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: float
+      severity: ERROR
+    - type: range
+      min: 0.01
+      max: 9999999.99
+      severity: ERROR
+
+  status:
+    - type: required
+      severity: WARNING
+    - type: type
+      data_type: str
+      severity: WARNING
+
+# 使用者資料驗證規則
+user_validations:
+  user_id:
+    - type: required
+      severity: ERROR
+    - type: pattern
+      pattern: '^U[0-9]{4,}$'
+      severity: ERROR
+
+  email:
+    - type: required
+      severity: ERROR
+    - type: pattern
+      pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+      severity: ERROR
+
+  age:
+    - type: type
+      data_type: int
+      severity: ERROR
+    - type: range
+      min: 0
+      max: 150
+      severity: ERROR
+
+  phone:
+    - type: pattern
+      pattern: '^\d{7,}$'
+      severity: WARNING
+
+# 產品資料驗證規則
+product_validations:
+  product_id:
+    - type: required
+      severity: ERROR
+    - type: pattern
+      pattern: '^P[0-9]{4,}$'
+      severity: ERROR
+
+  product_name:
+    - type: required
+      severity: ERROR
+    - type: length
+      min_length: 3
+      max_length: 100
+      severity: ERROR
+
+  category:
+    - type: required
+      severity: ERROR
+
+  price:
+    - type: required
+      severity: ERROR
+    - type: type
+      data_type: float
+      severity: ERROR
+    - type: range
+      min: 0.01
+      max: 999999.99
+      severity: ERROR
+
+  stock:
+    - type: type
+      data_type: int
+      severity: WARNING
+    - type: range
+      min: 0
+      max: 1000000
+      severity: WARNING
