@@ -1,68 +1,11 @@
-# Excel to Python Advanced Analytics - 套件需求清單
-
-# ===== 核心資料處理套件 =====
 pandas>=2.1.0
 numpy>=1.24.0
-
-# ===== Excel 讀寫套件 =====
 openpyxl>=3.1.0
 xlsxwriter>=3.1.0
-xlrd>=2.0.1  # 讀取舊版 .xls 檔案
-
-# ===== 資料視覺化套件 =====
 matplotlib>=3.7.0
-seaborn>=0.12.0
 plotly>=5.14.0
-
-# ===== 機器學習與統計套件 =====
+streamlit>=1.35.0
 scikit-learn>=1.3.0
-scipy>=1.11.0
-mlxtend>=0.22.0  # 購物籃分析（關聯規則）
-
-# ===== 自動化與工作流程 =====
-schedule>=1.2.0  # 排程執行
-pyyaml>=6.0  # YAML 設定檔
-python-dotenv>=1.0.0  # 環境變數管理
-
-# ===== 報表與文件生成 =====
-python-pptx>=0.6.21  # PowerPoint 自動化
-reportlab>=4.0.0  # PDF 生成
-Pillow>=10.0.0  # 圖片處理
-
-# ===== Jupyter 筆記本 =====
-jupyter>=1.0.0
-notebook>=7.0.0
-ipykernel>=6.25.0
-ipywidgets>=8.1.0
-
-# ===== 資料驗證與清洗 =====
-pandera>=0.17.0  # 資料結構驗證
-faker>=19.0.0  # 模擬資料生成
-
-# ===== 效能與優化 =====
-tqdm>=4.66.0  # 進度條
-numba>=0.58.0  # JIT 編譯加速（選用）
-
-# ===== 開發工具 =====
-black>=23.0.0  # 代碼格式化
-flake8>=6.1.0  # 代碼檢查
-pytest>=7.4.0  # 單元測試
-mypy>=1.5.0  # 型別檢查（選用）
-
-# ===== 實用工具 =====
-python-dateutil>=2.8.0
-pytz>=2023.3
-requests>=2.31.0
-
-# ===== 注意事項 =====
-# 1. 建議使用 Python 3.9 或以上版本
-# 2. 建議在虛擬環境中安裝套件
-# 3. 如遇到安裝問題，可嘗試逐個安裝核心套件
-#
-# 安裝指令：
-# pip install -r requirements.txt
-#
-# 或分批安裝（如果一次安裝失敗）：
-# pip install pandas numpy openpyxl xlsxwriter matplotlib seaborn
-# pip install scikit-learn mlxtend jupyter notebook
-# pip install python-pptx reportlab schedule pyyaml faker
+mlxtend>=0.22.0
+pytest>=7.4.0
+playwright>=1.45.0

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Excel Python Analytics Demo Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; background: #f7f9fb; color: #1f2933; }
+    h1, h2 { color: #0a4c6a; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .card, figure { background: #fff; border: 1px solid #d8dee6; border-radius: 8px; padding: 16px; }
+    .value { font-size: 26px; font-weight: 800; color: #0a4c6a; }
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { border: 1px solid #d8dee6; padding: 8px 10px; text-align: left; }
+    img { max-width: 100%; border: 1px solid #d8dee6; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Excel Python Analytics Demo Summary</h1>
+  <p>Static snapshot for reviewers who want to inspect the outcome without launching Streamlit.</p>
+  <div class="grid">
+    <div class="card"><div>Total revenue</div><div class="value">$331,385</div></div>
+    <div class="card"><div>Orders</div><div class="value">403</div></div>
+    <div class="card"><div>AOV</div><div class="value">$822.29</div></div>
+    <div class="card"><div>Quality score</div><div class="value">89.2</div></div>
+  </div>
+  <h2>Dataset Profile</h2>
+  <table><thead><tr><th>Dataset</th><th>Rows</th><th>Columns</th><th>Quality score</th></tr></thead><tbody><tr><td>orders</td><td>420</td><td>5</td><td>85.0</td></tr><tr><td>order_items</td><td>1,059</td><td>7</td><td>68.0</td></tr><tr><td>customers</td><td>120</td><td>5</td><td>95.0</td></tr><tr><td>products</td><td>60</td><td>7</td><td>100.0</td></tr><tr><td>inventory</td><td>60</td><td>8</td><td>98.0</td></tr></tbody></table>
+  <h2>Generated Artifacts</h2>
+  <ul><li><code>reports/portfolio_excel_analysis_report.xlsx</code> - Formatted portfolio Excel analysis report</li><li><code>data/processed/demo_cleaned_messy_sales.xlsx</code> - demo_cleaned_messy_sales.xlsx</li><li><code>reports/openpyxl_feature_showcase.xlsx</code> - openpyxl_feature_showcase.xlsx</li></ul>
+  <h2>Dashboard Screenshots</h2>
+  <div class="grid"><figure><img src='../assets/screenshots/before_single_page.png' alt='before_single_page'><figcaption>before_single_page</figcaption></figure><figure><img src='../assets/screenshots/business_analytics.png' alt='business_analytics'><figcaption>business_analytics</figcaption></figure><figure><img src='../assets/screenshots/demo_01_home_guided.png' alt='demo_01_home_guided'><figcaption>demo_01_home_guided</figcaption></figure><figure><img src='../assets/screenshots/demo_02_upload_profile.png' alt='demo_02_upload_profile'><figcaption>demo_02_upload_profile</figcaption></figure><figure><img src='../assets/screenshots/demo_03_cleaning.png' alt='demo_03_cleaning'><figcaption>demo_03_cleaning</figcaption></figure><figure><img src='../assets/screenshots/demo_04_business_analytics.png' alt='demo_04_business_analytics'><figcaption>demo_04_business_analytics</figcaption></figure><figure><img src='../assets/screenshots/demo_05_report_export.png' alt='demo_05_report_export'><figcaption>demo_05_report_export</figcaption></figure><figure><img src='../assets/screenshots/demo_06_openpyxl_showcase.png' alt='demo_06_openpyxl_showcase'><figcaption>demo_06_openpyxl_showcase</figcaption></figure><figure><img src='../assets/screenshots/home_dashboard.png' alt='home_dashboard'><figcaption>home_dashboard</figcaption></figure><figure><img src='../assets/screenshots/home_mobile.png' alt='home_mobile'><figcaption>home_mobile</figcaption></figure><figure><img src='../assets/screenshots/report_export.png' alt='report_export'><figcaption>report_export</figcaption></figure><figure><img src='../assets/screenshots/upload_profile.png' alt='upload_profile'><figcaption>upload_profile</figcaption></figure></div>
+</body>
+</html>
